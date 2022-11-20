@@ -81,3 +81,5 @@
 #else
 #define QUERY_PROFILER_DEFAULT_SAMPLE_RATE_NS 0
 #endif
+
+#define DEFAULT_OPENSSLCONF_PATH "/etc/clcikhouse-server/openssl.conf"

@@ -290,3 +290,7 @@
 [submodule "contrib/morton-nd"]
 	path = contrib/morton-nd
 	url = https://github.com/morton-nd/morton-nd
+[submodule "contrib/openssl"]
+	path = contrib/openssl
+	url = https://github.com/openssl/openssl
+	branch = openssl-3.0

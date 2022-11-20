@@ -674,6 +674,20 @@ int Server::main(const std::vector<std::string> & /*args*/)
     }
 #endif
 
+#if USE_OPENSSL_INTREE
+    setenv("OPENSSL_CONF", DEFAULT_OPENSSL_CONF, true);
+
+    if (config().has("opensslconf"))
+    {
+        std::string opensslconf_path = config().getString("opensslconf");
+
+	if (!opensslconf_path.empty())
+        {
+            setenv("OPENSSL_CONF", opensslconf_path.c_str(), true);
+	}
+    }
+#endif
+
     registerFunctions();
     registerAggregateFunctions();
     registerTableFunctions();

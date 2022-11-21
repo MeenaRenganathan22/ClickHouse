@@ -675,7 +675,7 @@ int Server::main(const std::vector<std::string> & /*args*/)
 #endif
 
 #if USE_OPENSSL_INTREE
-    setenv("OPENSSL_CONF", DEFAULT_OPENSSL_CONF, true);
+    setenv("OPENSSL_CONF", DEFAULT_OPENSSL_CONF_PATH, true);
 
     if (config().has("opensslconf"))
     {
